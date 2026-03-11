@@ -10,32 +10,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body data-page="index">
     <!-- Navigation -->
-    <nav class="navbar" id="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="nav-logo">
-                <img src="images/logo-white.svg" alt="Stáj Urban" class="nav-logo-img nav-logo-white">
-                <img src="images/logo.svg" alt="Stáj Urban" class="nav-logo-img nav-logo-dark">
-            </a>
-            <button class="nav-toggle" id="navToggle" aria-label="Menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <ul class="nav-menu" id="navMenu">
-                <li><a href="areal.html" class="nav-link">Areál</a></li>
-                <li><a href="ustajeni.html" class="nav-link">Ustájení</a></li>
-                <li><a href="skola.html" class="nav-link">Škola a vyjížďky</a></li>
-                <li><a href="kontakt.html" class="nav-link nav-link--cta">Kontakt</a></li>
-            </ul>
-        </div>
-    </nav>
+    <nav class="navbar" id="navbar"></nav>
 
     <!-- Hero Section -->
     <section class="hero" id="hero">
         <div class="hero-bg">
-            <img src="images/hero-placeholder.svg" alt="Stáj Urban - jezdecký areál" class="hero-img">
+            <img src="images/20250419_111135.jpg" alt="Stáj Urban - jezdecký areál" class="hero-img">
         </div>
         <div class="hero-overlay"></div>
         <div class="hero-content">
@@ -44,7 +26,8 @@
             <p class="hero-desc">Tradice od roku 1994 &middot; Bojanovice, 25 km od Prahy</p>
             <div class="hero-actions">
                 <a href="ustajeni.html" class="btn btn-primary">Ustájení</a>
-                <a href="kontakt.html" class="btn btn-outline">Kontaktujte nás</a>
+                <a href="skola.html" class="btn btn-outline">Výcvik</a>
+                <a href="vyjizky.html" class="btn btn-outline">Vyjížďky</a>
             </div>
         </div>
         <a href="#o-nas" class="hero-scroll" aria-label="Scroll down">
@@ -59,7 +42,7 @@
         <div class="container">
             <div class="about-grid">
                 <div class="about-image">
-                    <img src="images/about-placeholder.svg" alt="O stáji Urban" loading="lazy">
+                    <img src="images/20250419_111200.jpg" alt="O stáji Urban" loading="lazy">
                 </div>
                 <div class="about-content">
                     <span class="section-label">O nás</span>
@@ -92,7 +75,7 @@
                 <span class="section-label">Co nabízíme</span>
                 <h2 class="section-title">Naše služby</h2>
             </div>
-            <div class="services-grid">
+            <div class="services-grid services-grid--3col">
                 <a href="areal.html" class="service-card service-card--link">
                     <div class="service-icon">
                         <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2">
@@ -117,6 +100,19 @@
                     <p>Prostorné boxy 4&times;4 m ve vzdušných stájích. Krmení 3&times; denně, výběhový režim, podestýlka.</p>
                     <span class="service-more">Zjistit více &rarr;</span>
                 </a>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="4" y="22" width="40" height="24" rx="4"/>
+                            <rect x="44" y="14" width="16" height="32" rx="3"/>
+                            <circle cx="16" cy="50" r="6"/>
+                            <circle cx="48" cy="50" r="6"/>
+                            <path d="M44 26h12l4 10h-16"/>
+                        </svg>
+                    </div>
+                    <h3>Přeprava koní</h3>
+                    <p>Přeprava až 4 koní — Renault Master s přívěsem, kamerový systém pro bezpečnost. Certifikovaní řidiči a průvodci.</p>
+                </div>
                 <a href="skola.html" class="service-card service-card--link">
                     <div class="service-icon">
                         <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2">
@@ -124,9 +120,35 @@
                             <path d="M16 52c0-8.837 7.163-16 16-16s16 7.163 16 16"/>
                         </svg>
                     </div>
-                    <h3>Škola a vyjížďky</h3>
-                    <p>Jezdecká škola pro začátečníky i pokročilé. Vyjížďky do krásné přírody v okolí Slapské přehrady.</p>
+                    <h3>Jezdecká škola</h3>
+                    <p>Výuka jízdy, základní a skokový výcvik pro začátečníky i pokročilé, děti i dospělé.</p>
                     <span class="service-more">Zjistit více &rarr;</span>
+                </a>
+                <a href="vyjizky.html" class="service-card service-card--link">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M8 56l14-20 10 12 12-16 12 24"/>
+                            <circle cx="44" cy="16" r="6"/>
+                        </svg>
+                    </div>
+                    <h3>Vyjížďky</h3>
+                    <p>Vyjížďky do krásné přírody v okolí Slapské přehrady — Bojanovické lesy, údolí Kocáby.</p>
+                    <span class="service-more">Zjistit více &rarr;</span>
+                </a>
+                <a href="#tabor" class="service-card service-card--link">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="32" cy="16" r="8"/>
+                            <path d="M20 56c0-6.627 5.373-12 12-12s12 5.373 12 12"/>
+                            <circle cx="14" cy="22" r="6"/>
+                            <path d="M4 48c0-5.523 4.477-10 10-10"/>
+                            <circle cx="50" cy="22" r="6"/>
+                            <path d="M60 48c0-5.523-4.477-10-10-10"/>
+                        </svg>
+                    </div>
+                    <h3>Letní tábor</h3>
+                    <p>Příměstský tábor pro děti s výukou jízdy, teorií o koních a bohatým programem.</p>
+                    <span class="service-more">Více info &darr;</span>
                 </a>
             </div>
         </div>
@@ -141,22 +163,40 @@
             </div>
             <div class="gallery-grid">
                 <div class="gallery-item gallery-item--wide">
-                    <img src="images/gallery-1-placeholder.svg" alt="Kolbiště" loading="lazy">
+                    <img src="images/20250515_093807.jpg" alt="Klisna s hříbětem na pastvě" loading="lazy">
                 </div>
                 <div class="gallery-item">
-                    <img src="images/gallery-2-placeholder.svg" alt="Koně ve výběhu" loading="lazy">
+                    <img src="images/20250419_111302.jpg" alt="Koně pod kvetoucími stromy" loading="lazy">
                 </div>
                 <div class="gallery-item">
-                    <img src="images/gallery-3-placeholder.svg" alt="Stáje" loading="lazy">
+                    <img src="images/IMG-20250702-WA0042.jpg" alt="Jezdecká škola v kryté hale" loading="lazy">
                 </div>
                 <div class="gallery-item">
-                    <img src="images/gallery-4-placeholder.svg" alt="Jezdecká škola" loading="lazy">
+                    <img src="images/IMG-20250704-WA0084.jpg" alt="Jezdkyně v kryté hale" loading="lazy">
                 </div>
                 <div class="gallery-item gallery-item--wide">
-                    <img src="images/gallery-5-placeholder.svg" alt="Krajina v okolí" loading="lazy">
+                    <img src="images/20251101_122927.jpg" alt="Pastviny a krajina" loading="lazy">
                 </div>
                 <div class="gallery-item">
-                    <img src="images/gallery-6-placeholder.svg" alt="Vyjížďka do přírody" loading="lazy">
+                    <img src="images/20251015_112024.jpg" alt="Podzimní areál" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Letní tábor -->
+    <section class="section section--about" id="tabor">
+        <div class="container">
+            <div class="about-grid about-grid--reverse">
+                <div class="about-image">
+                    <img src="images/IMG-20250722-WA0001.jpg" alt="Letní příměstský tábor" loading="lazy">
+                </div>
+                <div class="about-content">
+                    <span class="section-label">Pro děti</span>
+                    <h2 class="section-title">Letní příměstský<br>tábor</h2>
+                    <p>Každoročně pořádáme letní příměstský tábor pro děti s výukou jízdy na koni, teorií o koních, praktickými dovednostmi a bohatým doprovodným programem — soutěže, výlety a spousta zábavy.</p>
+                    <p>Podrobnosti a termíny se dozvíte u Hanky Kopečné.</p>
+                    <a href="kontakt.html" class="btn btn-primary">Mám zájem</a>
                 </div>
             </div>
         </div>
@@ -168,46 +208,33 @@
             <div class="cta-box">
                 <h2 class="section-title">Máte zájem?</h2>
                 <p>Neváhejte nás kontaktovat — rádi vám odpovíme na všechny dotazy ohledně ustájení, jezdecké školy nebo vyjížděk.</p>
+                <div class="cta-contacts">
+                    <div class="cta-contact">
+                        <div class="cta-avatar">
+                            <img src="images/karel-urban.jpg" alt="Karel Urban">
+                        </div>
+                        <strong>Karel Urban</strong>
+                        <span class="cta-contact-role">Ustájení &amp; přeprava</span>
+                        <a href="tel:+420602314462" class="cta-contact-phone">602 314 462</a>
+                    </div>
+                    <div class="cta-contact">
+                        <div class="cta-avatar">
+                            <img src="images/hana-kopecna.jpg" alt="Hana Kopečná">
+                        </div>
+                        <strong>Ing. Hana Kopečná</strong>
+                        <span class="cta-contact-role">Výcvik &amp; vyjížďky</span>
+                        <a href="tel:+420725026401" class="cta-contact-phone">725 026 401</a>
+                    </div>
+                </div>
                 <a href="kontakt.html" class="btn btn-primary btn-large">Kontaktujte nás</a>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <img src="images/logo-white.svg" alt="Stáj Urban" class="footer-logo">
-                    <p>Stáj URBAN spol. s r.o.<br>IČ: 61458708</p>
-                </div>
-                <div class="footer-nav">
-                    <h4>Navigace</h4>
-                    <a href="areal.html">Areál</a>
-                    <a href="ustajeni.html">Ustájení</a>
-                    <a href="skola.html">Škola a vyjížďky</a>
-                    <a href="kontakt.html">Kontakt</a>
-                </div>
-                <div class="footer-contact">
-                    <h4>Kontakt</h4>
-                    <p>Bojanovice 107, 252 06 Davle</p>
-                    <p><a href="tel:+420602314462">602 314 462</a></p>
-                    <p><a href="mailto:stajurban@seznam.cz">stajurban@seznam.cz</a></p>
-                    <div class="footer-social">
-                        <a href="https://www.facebook.com/profile.php?id=100057574234572" target="_blank" rel="noopener" aria-label="Facebook" class="social-link">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 Stáj Urban spol. s r.o. Všechna práva vyhrazena.</p>
-            </div>
-        </div>
-    </footer>
+    <footer class="footer" id="footer"></footer>
 
+    <script src="shared-layout.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
