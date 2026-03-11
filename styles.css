@@ -241,9 +241,10 @@ a {
     inset: 0;
     background: linear-gradient(
         180deg,
-        rgba(0, 0, 0, 0.3) 0%,
-        rgba(0, 0, 0, 0.1) 40%,
-        rgba(0, 0, 0, 0.4) 100%
+        rgba(0, 0, 0, 0.4) 0%,
+        rgba(0, 0, 0, 0.35) 35%,
+        rgba(0, 0, 0, 0.3) 60%,
+        rgba(0, 0, 0, 0.5) 100%
     );
 }
 
@@ -253,6 +254,7 @@ a {
     text-align: center;
     color: var(--color-white);
     padding: 0 24px;
+    text-shadow: 0 2px 16px rgba(0, 0, 0, 0.6), 0 1px 4px rgba(0, 0, 0, 0.4);
 }
 
 .hero-title {
@@ -1153,6 +1155,304 @@ a {
     .page-header {
         padding: 100px 0 48px;
     }
+}
+
+/* --- Pricing Tables (shared) --- */
+.pricing-tables {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    max-width: 900px;
+    margin: 0 auto 32px;
+}
+
+.pricing-table {
+    background: var(--color-white);
+    border-radius: 12px;
+    padding: 32px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+.pricing-table-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    color: var(--color-primary);
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--color-accent);
+}
+
+.pricing-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.pricing-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--color-bg-alt);
+    gap: 12px;
+}
+
+.pricing-list li:last-child {
+    border-bottom: none;
+}
+
+.pricing-list li span:first-child {
+    font-size: 0.95rem;
+    color: var(--color-text);
+}
+
+.pricing-value {
+    font-weight: 600;
+    color: var(--color-primary);
+    white-space: nowrap;
+    font-size: 0.95rem;
+}
+
+.pricing-notes {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+    color: var(--color-text-light);
+    font-size: 0.9rem;
+}
+
+.pricing-note-small {
+    font-size: 0.85rem;
+    opacity: 0.7;
+    margin-top: 8px;
+}
+
+/* --- Horses/Ponies (shared) --- */
+.section--horses {
+    background: var(--color-bg);
+    padding: var(--section-padding) 0;
+}
+
+.horses-subtitle {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    color: var(--color-primary);
+    margin-bottom: 24px;
+    margin-top: 16px;
+}
+
+.horses-subtitle:not(:first-of-type) {
+    margin-top: 48px;
+}
+
+.horses-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 20px;
+}
+
+.horse-card {
+    background: var(--color-white);
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+    transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.horse-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.horse-card h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.15rem;
+    color: var(--color-primary);
+    margin-bottom: 8px;
+}
+
+.horse-card p {
+    font-size: 0.9rem;
+    color: var(--color-text-light);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* --- Trainer Box --- */
+.trainer-box {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+    background: var(--color-white);
+    border-radius: 16px;
+    padding: 48px 40px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.06);
+}
+
+.trainer-box h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    color: var(--color-primary);
+    margin-bottom: 4px;
+}
+
+.trainer-role {
+    color: var(--color-accent);
+    font-weight: 500;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 16px;
+}
+
+.trainer-box p {
+    color: var(--color-text-light);
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 12px;
+}
+
+.trainer-contact-line {
+    margin-top: 24px;
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn-small {
+    padding: 8px 20px;
+    font-size: 0.85rem;
+}
+
+.section .btn-outline,
+.page-header .btn-outline,
+.trainer-box .btn-outline {
+    border: 1.5px solid var(--color-primary);
+    color: var(--color-primary);
+    background: transparent;
+}
+
+.section .btn-outline:hover,
+.page-header .btn-outline:hover,
+.trainer-box .btn-outline:hover {
+    background: var(--color-primary);
+    color: var(--color-white);
+}
+
+/* --- 3-col services grid variant --- */
+.services-grid--3col {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+/* --- 2-col services grid variant --- */
+.services-grid--2col {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+/* --- CTA buttons row --- */
+.cta-buttons {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Responsive additions */
+@media (max-width: 768px) {
+    .pricing-tables {
+        grid-template-columns: 1fr;
+    }
+
+    .services-grid--3col {
+        grid-template-columns: 1fr;
+    }
+
+    .services-grid--2col {
+        grid-template-columns: 1fr;
+    }
+
+    .trainer-box {
+        padding: 32px 20px;
+    }
+
+    .trainer-contact-line {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* --- CTA Contact Profiles --- */
+.cta-contacts {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    margin-bottom: 32px;
+    flex-wrap: wrap;
+}
+
+.cta-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+.cta-avatar {
+    width: 72px;
+    height: 72px;
+    min-width: 72px;
+    min-height: 72px;
+    max-width: 72px;
+    max-height: 72px;
+    border-radius: 50%;
+    background: var(--color-bg-alt);
+    color: var(--color-text-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 8px;
+    overflow: hidden;
+}
+
+.cta-avatar img {
+    width: 72px;
+    height: 72px;
+    object-fit: cover;
+}
+
+.cta-avatar svg {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    min-height: 40px;
+    max-width: 40px;
+    max-height: 40px;
+    flex-shrink: 0;
+}
+
+.cta-contact strong {
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    color: var(--color-primary-dark);
+}
+
+.cta-contact-role {
+    font-size: 0.8rem;
+    color: var(--color-text-light);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.cta-contact-phone {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-accent) !important;
+    margin-top: 4px;
+}
+
+.cta-contact-phone:hover {
+    color: var(--color-accent-dark) !important;
 }
 
 /* --- Animations (fade in on scroll) --- */
