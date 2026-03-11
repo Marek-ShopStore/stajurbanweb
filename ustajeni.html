@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ustájení | Stáj Urban</title>
+    <meta name="description" content="Ustájení koní ve Stáj Urban - prostorné boxy, krmení 3x denně, výběhový režim, kompletní péče o vaše koně.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar--solid" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="images/logo.svg" alt="Stáj Urban" class="nav-logo-img">
+            </a>
+            <button class="nav-toggle" id="navToggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="areal.html" class="nav-link">Areál</a></li>
+                <li><a href="ustajeni.html" class="nav-link active">Ustájení</a></li>
+                <li><a href="skola.html" class="nav-link">Škola a vyjížďky</a></li>
+                <li><a href="kontakt.html" class="nav-link nav-link--cta">Kontakt</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <span class="section-label">Služby</span>
+            <h1 class="page-header-title">Ustájení</h1>
+            <p class="page-header-desc">Komplexní péče o vašeho koně v moderním prostředí</p>
+        </div>
+    </section>
+
+    <!-- Popis ustájení -->
+    <section class="section section--about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image">
+                    <img src="images/facility-2-placeholder.svg" alt="Boxy pro koně" loading="lazy">
+                </div>
+                <div class="about-content">
+                    <span class="section-label">Ustájení</span>
+                    <h2 class="section-title">Prostorné boxy<br>s kompletní péčí</h2>
+                    <p>Nabízíme ustájení ve vnitřních i venkovních boxech o rozměrech 4&times;4 m. Každý kůň má zajištěn individuální přístup, pravidelné krmení a denní výběh.</p>
+                    <p>Stálý personál dohlíží na zdravotní stav koní 7 dní v týdnu. Zajišťujeme také podkovářské a veterinární služby.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ceník -->
+    <section class="section section--pricing" id="cenik">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Ceník</span>
+                <h2 class="section-title">Ceník ustájení</h2>
+            </div>
+            <div class="pricing-card">
+                <div class="pricing-header">
+                    <div class="pricing-price">
+                        <span class="pricing-amount">12 500</span>
+                        <span class="pricing-currency">Kč/měsíc</span>
+                    </div>
+                    <span class="pricing-vat">vč. DPH</span>
+                </div>
+                <ul class="pricing-features">
+                    <li>Ustájení ve vnitřním nebo venkovním boxu 4&times;4 m</li>
+                    <li>Krmení 3&times; denně</li>
+                    <li>Podestýlka sláma</li>
+                    <li>Výběhový režim</li>
+                    <li>Používání tréninkových ploch a skokového materiálu</li>
+                    <li>Místo v sedlovně a skříňka v šatně</li>
+                    <li>Stálý dozor nad ustájenými koňmi</li>
+                </ul>
+                <a href="kontakt.html" class="btn btn-primary btn-large">Mám zájem</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Další služby -->
+    <section class="section section--services">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Navíc</span>
+                <h2 class="section-title">Doplňkové služby</h2>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M32 8l6 18h18l-14 10 5 18-15-11-15 11 5-18L8 26h18z"/>
+                        </svg>
+                    </div>
+                    <h3>Sportovní výcvik</h3>
+                    <p>Kvalitní tréninkové plochy, překážkový materiál a profesionální příprava na závody ve skocích.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 52V20l20-12 20 12v32"/>
+                            <rect x="24" y="36" width="16" height="16"/>
+                            <path d="M32 36v16"/>
+                        </svg>
+                    </div>
+                    <h3>Podkovářské služby</h3>
+                    <p>Zajišťujeme pravidelné podkovářské služby, veterinární ošetření a stálý dozor nad koňmi.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="8" y="20" width="48" height="28" rx="4"/>
+                            <circle cx="20" cy="34" r="6"/>
+                            <circle cx="44" cy="34" r="6"/>
+                            <path d="M20 12h24"/>
+                        </svg>
+                    </div>
+                    <h3>Přeprava koní</h3>
+                    <p>Přeprava až 8 koní v moderním kamionu vybaveném kamerovým systémem pro bezpečnost.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="images/logo-white.svg" alt="Stáj Urban" class="footer-logo">
+                    <p>Stáj URBAN spol. s r.o.<br>IČ: 61458708</p>
+                </div>
+                <div class="footer-nav">
+                    <h4>Navigace</h4>
+                    <a href="areal.html">Areál</a>
+                    <a href="ustajeni.html">Ustájení</a>
+                    <a href="skola.html">Škola a vyjížďky</a>
+                    <a href="kontakt.html">Kontakt</a>
+                </div>
+                <div class="footer-contact">
+                    <h4>Kontakt</h4>
+                    <p>Bojanovice 107, 252 06 Davle</p>
+                    <p><a href="tel:+420602314462">602 314 462</a></p>
+                    <p><a href="mailto:stajurban@seznam.cz">stajurban@seznam.cz</a></p>
+                    <div class="footer-social">
+                        <a href="https://www.facebook.com/profile.php?id=100057574234572" target="_blank" rel="noopener" aria-label="Facebook" class="social-link">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Stáj Urban spol. s r.o. Všechna práva vyhrazena.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -13,8 +13,11 @@
     --color-primary: #2c4a2c;
     --color-primary-light: #4a6741;
     --color-primary-dark: #1a2e1a;
-    --color-accent: #8B7355;
-    --color-accent-light: #a89070;
+    --color-accent: #5cb033;
+    --color-accent-dark: #4a9028;
+    --color-accent-light: #6ec043;
+    --color-brown: #8B7355;
+    --color-brown-light: #a89070;
     --color-bg: #faf8f5;
     --color-bg-alt: #f0ebe3;
     --color-text: #2d2d2d;
@@ -70,7 +73,8 @@ a {
     transition: all var(--transition);
 }
 
-.navbar.scrolled {
+.navbar.scrolled,
+.navbar--solid {
     background: rgba(255, 255, 255, 0.97);
     backdrop-filter: blur(10px);
     padding: 12px 0;
@@ -88,18 +92,33 @@ a {
 
 .nav-logo {
     z-index: 1001;
+    display: flex;
+    align-items: center;
 }
 
-.logo-text {
-    font-family: var(--font-heading);
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--color-white);
-    transition: color var(--transition);
+.nav-logo-img {
+    height: 36px;
+    width: auto;
 }
 
-.navbar.scrolled .logo-text {
-    color: var(--color-primary-dark);
+/* Logo visibility toggle — homepage hero: white logo, scrolled: dark logo */
+.nav-logo-dark {
+    display: none;
+}
+
+.navbar.scrolled .nav-logo-white,
+.navbar--solid .nav-logo-white {
+    display: none;
+}
+
+.navbar.scrolled .nav-logo-dark,
+.navbar--solid .nav-logo-dark {
+    display: block;
+}
+
+/* On subpages (.navbar--solid) there's only one logo img, always visible */
+.navbar--solid .nav-logo-img {
+    display: block;
 }
 
 .nav-menu {
@@ -134,7 +153,12 @@ a {
     width: 100%;
 }
 
-.navbar.scrolled .nav-link {
+.nav-link.active::after {
+    width: 100%;
+}
+
+.navbar.scrolled .nav-link,
+.navbar--solid .nav-link {
     color: var(--color-text);
 }
 
@@ -150,7 +174,7 @@ a {
 }
 
 .nav-link--cta:hover {
-    background: var(--color-accent-light);
+    background: var(--color-accent-dark);
 }
 
 /* Hamburger */
@@ -173,7 +197,8 @@ a {
     transition: all var(--transition);
 }
 
-.navbar.scrolled .nav-toggle span {
+.navbar.scrolled .nav-toggle span,
+.navbar--solid .nav-toggle span {
     background: var(--color-text);
 }
 
@@ -276,6 +301,33 @@ a {
     50% { transform: translateX(-50%) translateY(8px); }
 }
 
+/* --- Page Header (subpages) --- */
+.page-header {
+    padding: 160px 0 80px;
+    background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 50%, var(--color-primary-light) 100%);
+    color: var(--color-white);
+    text-align: center;
+}
+
+.page-header .section-label {
+    color: var(--color-accent-light);
+}
+
+.page-header-title {
+    font-family: var(--font-heading);
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 16px;
+}
+
+.page-header-desc {
+    font-size: 1.15rem;
+    opacity: 0.8;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
 /* --- Buttons --- */
 .btn {
     display: inline-flex;
@@ -299,8 +351,8 @@ a {
 }
 
 .btn-primary:hover {
-    background: var(--color-accent-light);
-    border-color: var(--color-accent-light);
+    background: var(--color-accent-dark);
+    border-color: var(--color-accent-dark);
     transform: translateY(-2px);
 }
 
@@ -358,6 +410,14 @@ a {
     grid-template-columns: 1fr 1fr;
     gap: 64px;
     align-items: center;
+}
+
+.about-grid--reverse {
+    direction: rtl;
+}
+
+.about-grid--reverse > * {
+    direction: ltr;
 }
 
 .about-image img {
@@ -418,6 +478,29 @@ a {
 .service-card:hover {
     transform: translateY(-4px);
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+}
+
+.service-card--link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.service-card--link:hover {
+    border-color: var(--color-accent);
+}
+
+.service-more {
+    display: inline-block;
+    margin-top: 16px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--color-accent);
+    transition: color var(--transition);
+}
+
+.service-card--link:hover .service-more {
+    color: var(--color-accent-dark);
 }
 
 .service-icon {
@@ -505,6 +588,44 @@ a {
     margin-top: 3px;
 }
 
+/* Facility features grid (areál page) */
+.facility-features-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.facility-feature {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 24px;
+    background: var(--color-white);
+    border-radius: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.facility-feature svg {
+    flex-shrink: 0;
+    color: var(--color-accent);
+    margin-top: 2px;
+}
+
+.facility-feature h3 {
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    margin-bottom: 4px;
+    color: var(--color-primary-dark);
+}
+
+.facility-feature p {
+    font-size: 0.9rem;
+    color: var(--color-text-light);
+    line-height: 1.5;
+}
+
 /* --- Pricing --- */
 .section--pricing {
     background: var(--color-primary-dark);
@@ -569,7 +690,7 @@ a {
 }
 
 .pricing-features li::before {
-    content: '✓';
+    content: '\2713';
     position: absolute;
     left: 0;
     color: var(--color-accent-light);
@@ -610,6 +731,31 @@ a {
 
 .gallery-item--wide img {
     height: 280px;
+}
+
+/* --- CTA Section --- */
+.section--cta {
+    background: var(--color-bg-alt);
+}
+
+.cta-box {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 64px 40px;
+    background: var(--color-white);
+    border-radius: 16px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.06);
+}
+
+.cta-box .section-title {
+    margin-bottom: 16px;
+}
+
+.cta-box p {
+    color: var(--color-text-light);
+    font-size: 1.05rem;
+    margin-bottom: 32px;
 }
 
 /* --- Contact --- */
@@ -701,21 +847,21 @@ a {
 .footer {
     background: var(--color-primary-dark);
     color: rgba(255, 255, 255, 0.7);
-    padding: 48px 0 24px;
+    padding: 64px 0 24px;
 }
 
 .footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding-bottom: 32px;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: 48px;
+    padding-bottom: 40px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.footer-brand .logo-text {
-    color: var(--color-white);
-    display: block;
-    margin-bottom: 8px;
+.footer-logo {
+    height: 32px;
+    width: auto;
+    margin-bottom: 16px;
 }
 
 .footer-brand p {
@@ -723,19 +869,49 @@ a {
     opacity: 0.6;
 }
 
-.footer-links {
-    display: flex;
-    gap: 24px;
+.footer-nav h4,
+.footer-contact h4 {
+    color: var(--color-white);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 16px;
 }
 
-.footer-links a {
+.footer-nav a {
+    display: block;
     font-size: 0.9rem;
     opacity: 0.7;
+    padding: 4px 0;
     transition: opacity var(--transition);
 }
 
-.footer-links a:hover {
+.footer-nav a:hover {
     opacity: 1;
+}
+
+.footer-contact p {
+    font-size: 0.9rem;
+    opacity: 0.7;
+    margin-bottom: 4px;
+}
+
+.footer-contact a:hover {
+    opacity: 1;
+}
+
+.footer-social {
+    margin-top: 16px;
+}
+
+.footer .social-link {
+    background: rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.footer .social-link:hover {
+    background: var(--color-accent);
+    color: var(--color-white);
 }
 
 .footer-bottom {
@@ -768,6 +944,15 @@ a {
 
     .facility-grid {
         gap: 40px;
+    }
+
+    .facility-features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr 1fr;
+        gap: 32px;
     }
 }
 
@@ -814,10 +999,17 @@ a {
         background: white !important;
     }
 
+    /* Page header */
+    .page-header {
+        padding: 120px 0 60px;
+    }
+
     /* About */
-    .about-grid {
+    .about-grid,
+    .about-grid--reverse {
         grid-template-columns: 1fr;
         gap: 32px;
+        direction: ltr;
     }
 
     .about-image img {
@@ -881,15 +1073,15 @@ a {
         font-size: 2.8rem;
     }
 
-    /* Footer */
-    .footer-content {
-        flex-direction: column;
-        gap: 24px;
+    /* CTA */
+    .cta-box {
+        padding: 40px 24px;
     }
 
-    .footer-links {
-        flex-wrap: wrap;
-        gap: 16px;
+    /* Footer */
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 32px;
     }
 }
 
@@ -943,6 +1135,10 @@ a {
 
     .facility-img--small {
         height: 160px;
+    }
+
+    .page-header {
+        padding: 100px 0 48px;
     }
 }
 
