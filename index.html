@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stáj Urban | Jezdecký areál Bojanovice</title>
+    <meta name="description" content="Stáj Urban - moderní jezdecký areál poblíž Prahy. Ustájení koní, jezdecká škola, výcvik, vyjížďky do přírody.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">
+                <span class="logo-text">Stáj Urban</span>
+            </a>
+            <button class="nav-toggle" id="navToggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#o-nas" class="nav-link">O nás</a></li>
+                <li><a href="#sluzby" class="nav-link">Služby</a></li>
+                <li><a href="#areal" class="nav-link">Areál</a></li>
+                <li><a href="#ustajeni" class="nav-link">Ustájení</a></li>
+                <li><a href="#galerie" class="nav-link">Galerie</a></li>
+                <li><a href="#kontakt" class="nav-link nav-link--cta">Kontakt</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-bg">
+            <img src="images/hero-placeholder.svg" alt="Stáj Urban - jezdecký areál" class="hero-img">
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">Stáj Urban</h1>
+            <p class="hero-subtitle">Jezdecký areál poblíž Prahy</p>
+            <p class="hero-desc">Tradice od roku 1994 &middot; Bojanovice, 25 km od Prahy</p>
+            <div class="hero-actions">
+                <a href="#sluzby" class="btn btn-primary">Naše služby</a>
+                <a href="#kontakt" class="btn btn-outline">Kontaktujte nás</a>
+            </div>
+        </div>
+        <a href="#o-nas" class="hero-scroll" aria-label="Scroll down">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 5v14M5 12l7 7 7-7"/>
+            </svg>
+        </a>
+    </section>
+
+    <!-- O nás -->
+    <section class="section section--about" id="o-nas">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image">
+                    <img src="images/about-placeholder.svg" alt="O stáji Urban" loading="lazy">
+                </div>
+                <div class="about-content">
+                    <span class="section-label">O nás</span>
+                    <h2 class="section-title">Více než 30 let<br>jezdecké tradice</h2>
+                    <p>Stáj Urban založil v roce 1994 Karel Urban, bývalý reprezentant Československa v parkurovém skákání. Od roku 2004 sídlíme v moderně zrekonstruovaném areálu v Bojanovicích na Praze-západ.</p>
+                    <p>Neustále se rozvíjíme a modernizujeme, abychom nabídli to nejlepší zázemí pro koně i jezdce.</p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <span class="stat-number">50</span>
+                            <span class="stat-label">boxů</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">40</span>
+                            <span class="stat-label">koní</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">30+</span>
+                            <span class="stat-label">let tradice</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Služby -->
+    <section class="section section--services" id="sluzby">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Co nabízíme</span>
+                <h2 class="section-title">Naše služby</h2>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="8" y="16" width="48" height="40" rx="4"/>
+                            <path d="M8 28h48"/>
+                            <path d="M24 16V8h16v8"/>
+                        </svg>
+                    </div>
+                    <h3>Ustájení koní</h3>
+                    <p>Prostorné boxy 4&times;4 m ve vzdušných stájích. Krmení 3&times; denně, výběhový režim, podestýlka.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="32" cy="20" r="12"/>
+                            <path d="M16 52c0-8.837 7.163-16 16-16s16 7.163 16 16"/>
+                        </svg>
+                    </div>
+                    <h3>Jezdecká škola</h3>
+                    <p>Lekce pro začátečníky i pokročilé na školních koních. Individuální přístup pod vedením zkušených trenérů.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M8 56l14-20 10 12 12-16 12 24"/>
+                            <circle cx="44" cy="16" r="6"/>
+                        </svg>
+                    </div>
+                    <h3>Vyjížďky do přírody</h3>
+                    <p>Nádherné terény pro rekreační ježdění v okolí Slapské přehrady a přírodních stezek.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M32 8l6 18h18l-14 10 5 18-15-11-15 11 5-18L8 26h18z"/>
+                        </svg>
+                    </div>
+                    <h3>Sportovní výcvik</h3>
+                    <p>Kvalitní tréninkové plochy, překážkový materiál a profesionální příprava na závody ve skocích.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 52V20l20-12 20 12v32"/>
+                            <rect x="24" y="36" width="16" height="16"/>
+                            <path d="M32 36v16"/>
+                        </svg>
+                    </div>
+                    <h3>Podkovářské služby</h3>
+                    <p>Zajišťujeme pravidelné podkovářské služby, veterinární ošetření a stálý dozor nad koňmi.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="8" y="20" width="48" height="28" rx="4"/>
+                            <circle cx="20" cy="34" r="6"/>
+                            <circle cx="44" cy="34" r="6"/>
+                            <path d="M20 12h24"/>
+                        </svg>
+                    </div>
+                    <h3>Přeprava koní</h3>
+                    <p>Přeprava až 8 koní v moderním kamionu vybaveném kamerovým systémem pro bezpečnost.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Areál -->
+    <section class="section section--facility" id="areal">
+        <div class="container">
+            <div class="facility-grid">
+                <div class="facility-content">
+                    <span class="section-label">Vybavení</span>
+                    <h2 class="section-title">Moderní areál<br>pro koně i jezdce</h2>
+                    <ul class="facility-list">
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+                            Venkovní kolbiště 70&times;30 m s kvalitním povrchem
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+                            Prostorné boxy 4&times;4 m ve vzdušných stájích
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+                            Osvětlené tréninkové plochy
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+                            Velké travnaté výběhy a paddocky
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+                            Sedlovny a šatny pro jezdce
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+                            Překážkový materiál pro skokovou přípravu
+                        </li>
+                    </ul>
+                </div>
+                <div class="facility-images">
+                    <img src="images/facility-1-placeholder.svg" alt="Jízdárna" loading="lazy" class="facility-img facility-img--large">
+                    <img src="images/facility-2-placeholder.svg" alt="Stáje" loading="lazy" class="facility-img facility-img--small">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ustájení -->
+    <section class="section section--pricing" id="ustajeni">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Ustájení</span>
+                <h2 class="section-title">Ceník ustájení</h2>
+            </div>
+            <div class="pricing-card">
+                <div class="pricing-header">
+                    <div class="pricing-price">
+                        <span class="pricing-amount">12 500</span>
+                        <span class="pricing-currency">Kč/měsíc</span>
+                    </div>
+                    <span class="pricing-vat">vč. DPH</span>
+                </div>
+                <ul class="pricing-features">
+                    <li>Ustájení ve vnitřním nebo venkovním boxu 4&times;4 m</li>
+                    <li>Krmení 3&times; denně</li>
+                    <li>Podestýlka sláma</li>
+                    <li>Výběhový režim</li>
+                    <li>Používání tréninkových ploch a skokového materiálu</li>
+                    <li>Místo v sedlovně a skříňka v šatně</li>
+                    <li>Stálý dozor nad ustájenými koňmi</li>
+                </ul>
+                <a href="#kontakt" class="btn btn-primary btn-large">Mám zájem</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galerie -->
+    <section class="section section--gallery" id="galerie">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Galerie</span>
+                <h2 class="section-title">Nahlédněte k nám</h2>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item gallery-item--wide">
+                    <img src="images/gallery-1-placeholder.svg" alt="Kolbiště" loading="lazy">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery-2-placeholder.svg" alt="Koně ve výběhu" loading="lazy">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery-3-placeholder.svg" alt="Stáje" loading="lazy">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery-4-placeholder.svg" alt="Jezdecká škola" loading="lazy">
+                </div>
+                <div class="gallery-item gallery-item--wide">
+                    <img src="images/gallery-5-placeholder.svg" alt="Krajina v okolí" loading="lazy">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery-6-placeholder.svg" alt="Vyjížďka do přírody" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kontakt -->
+    <section class="section section--contact" id="kontakt">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <span class="section-label">Kontakt</span>
+                    <h2 class="section-title">Ozvěte se nám</h2>
+                    <p>Máte zájem o ustájení, jezdecké lekce nebo vyjížďky? Neváhejte nás kontaktovat.</p>
+
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+                                <circle cx="12" cy="10" r="3"/>
+                            </svg>
+                            <div>
+                                <strong>Adresa</strong>
+                                <p>Bojanovice 107<br>252 06 Davle</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+                            </svg>
+                            <div>
+                                <strong>Telefon</strong>
+                                <p><a href="tel:+420602314462">602 314 462</a><br><a href="tel:+420725026401">725 026 401</a></p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                <polyline points="22,6 12,13 2,6"/>
+                            </svg>
+                            <div>
+                                <strong>E-mail</strong>
+                                <p><a href="mailto:stajurban@seznam.cz">stajurban@seznam.cz</a></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-social">
+                        <a href="https://www.facebook.com/profile.php?id=100057574234572" target="_blank" rel="noopener" aria-label="Facebook" class="social-link">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-map">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2570.5!2d14.3891!3d49.8853!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470b8e2a1a1a1a1a%3A0x1a1a1a1a1a1a1a1a!2sBojanovice+107%2C+252+06+Davle!5e0!3m2!1scs!2scz!4v1700000000000!5m2!1scs!2scz"
+                        width="100%"
+                        height="100%"
+                        style="border:0; min-height: 400px;"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="Mapa - Stáj Urban">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="logo-text">Stáj Urban</span>
+                    <p>Stáj URBAN spol. s r.o.<br>IČ: 61458708</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#o-nas">O nás</a>
+                    <a href="#sluzby">Služby</a>
+                    <a href="#areal">Areál</a>
+                    <a href="#ustajeni">Ustájení</a>
+                    <a href="#kontakt">Kontakt</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Stáj Urban spol. s r.o. Všechna práva vyhrazena.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

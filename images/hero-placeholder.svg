@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="sky" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#2c3e50"/>
+      <stop offset="60%" style="stop-color:#4a6741"/>
+      <stop offset="100%" style="stop-color:#3d5a3a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#sky)"/>
+  <!-- Rolling hills -->
+  <ellipse cx="300" cy="750" rx="600" ry="200" fill="#2d4a2d" opacity="0.6"/>
+  <ellipse cx="1200" cy="800" rx="800" ry="250" fill="#345634" opacity="0.5"/>
+  <ellipse cx="960" cy="850" rx="1100" ry="300" fill="#3a5f3a" opacity="0.4"/>
+  <!-- Fence posts -->
+  <g stroke="#8B7355" stroke-width="4" fill="none" opacity="0.5">
+    <line x1="200" y1="650" x2="200" y2="720"/>
+    <line x1="300" y1="640" x2="300" y2="710"/>
+    <line x1="400" y1="635" x2="400" y2="705"/>
+    <line x1="500" y1="632" x2="500" y2="702"/>
+    <line x1="200" y1="670" x2="500" y2="660"/>
+    <line x1="200" y1="690" x2="500" y2="680"/>
+  </g>
+  <!-- Horse silhouette -->
+  <g transform="translate(900, 520) scale(1.5)" fill="#1a2e1a" opacity="0.7">
+    <path d="M0,80 Q10,60 20,55 Q30,48 40,50 L45,30 Q48,20 55,15 Q60,12 65,15 Q62,20 60,30 L58,45 Q65,42 75,44 Q90,48 100,55 Q115,65 120,80 Q122,88 118,95 L115,110 L108,110 L110,95 Q108,88 105,85 L100,110 L93,110 L95,85 Q85,80 70,78 L65,110 L58,110 L62,82 Q50,80 40,82 L38,110 L31,110 L35,85 Q25,88 18,95 L15,110 L8,110 L12,90 Q5,88 0,80z"/>
+  </g>
+  <!-- Text overlay hint -->
+  <rect x="0" y="0" width="1920" height="1080" fill="black" opacity="0.15"/>
+  <text x="960" y="540" text-anchor="middle" font-family="sans-serif" font-size="48" fill="white" opacity="0.3">HERO — nahraďte vlastní fotografií</text>
+</svg>

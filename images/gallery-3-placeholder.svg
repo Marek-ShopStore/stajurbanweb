@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <rect width="400" height="400" fill="#e0d5c5"/>
+  <rect x="50" y="100" width="300" height="180" fill="#c4b08a" rx="5"/>
+  <g fill="#a08860" stroke="#8B7355" stroke-width="2">
+    <rect x="70" y="130" width="80" height="150"/><rect x="160" y="130" width="80" height="150"/><rect x="250" y="130" width="80" height="150"/>
+  </g>
+  <text x="200" y="360" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#8B7355" opacity="0.5">GALERIE 3</text>
+</svg>
