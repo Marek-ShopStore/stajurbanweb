@@ -1,7 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
-  <rect width="400" height="400" fill="#d4c9b0"/>
-  <g transform="translate(100, 100) scale(0.8)" fill="#8B7355" opacity="0.25">
-    <path d="M0,150 Q20,100 50,80 Q80,55 110,60 L115,20 Q120,5 130,0 Q138,-3 142,5 Q138,15 135,30 L132,50 Q142,45 155,48 Q175,55 188,68 Q205,85 210,105 Q212,115 208,125 L205,150 Q185,145 170,148 Q150,150 130,155 Q110,158 90,155 Q70,152 50,155 Q30,158 15,155z"/>
-  </g>
-  <text x="200" y="360" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#8B7355" opacity="0.5">GALERIE 2</text>
-</svg>
