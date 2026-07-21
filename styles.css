@@ -778,6 +778,30 @@ a {
     background: var(--color-bg);
 }
 
+.contact-card {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 56px 48px;
+    background: var(--color-white);
+    border-radius: 16px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.06);
+}
+
+.contact-card .section-title {
+    margin-bottom: 16px;
+}
+
+.contact-card > p {
+    color: var(--color-text-light);
+    font-size: 1.05rem;
+    margin-bottom: 32px;
+}
+
+.contact-card .contact-grid {
+    gap: 40px;
+    align-items: stretch;
+}
+
 .contact-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -1077,6 +1101,10 @@ a {
     .contact-grid {
         grid-template-columns: 1fr;
         gap: 40px;
+    }
+
+    .contact-card {
+        padding: 40px 24px;
     }
 
     /* Pricing */
